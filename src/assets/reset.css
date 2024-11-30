@@ -1,0 +1,108 @@
+/* reset.css */
+
+/* 全局重置 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 3px dashed #228bec;
+}
+
+html {
+  font-size: 62.5%; /* 设置基础字体大小为 10px */
+  height: 100%;
+  line-height: 1.6;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* 备用背景色 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: gradientBackground 10s ease infinite; /* 应用渐变背景动画 */
+    background: linear-gradient(45deg, #ff6f61, #6a5acd, #48c9b0); /* 初始渐变色 */
+    background-size: 400% 400%;
+  }
+
+/* 动态渐变背景动画 */
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+h1, h2 {
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  appearance: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+input[type="text"] {
+  border-radius: 0.5rem; /* 添加圆角 */
+}
+
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 1.8rem; /* 在大屏设备上增加字体大小 */
+  }
+}
+
+/* 样式重置结束 */
